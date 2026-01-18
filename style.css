@@ -22,3 +22,8 @@ button.active {
     color: #3f0707;
     font-weight: bold;
 }
+
+img {
+    width: 300px;
+    height: 300px;
+}
