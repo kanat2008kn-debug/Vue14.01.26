@@ -16,3 +16,9 @@ button {
     padding: 8px 16px;
     cursor: pointer
 }
+
+button.active {
+    background-color: #c28109;
+    color: #3f0707;
+    font-weight: bold;
+}
