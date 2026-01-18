@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app">
+            <div
+                v-for="(item, itemIndex) in items"
+                :key="itemIndex"
+            >
+                <h3
+                    @click="openItem(itemIndex)"
+                >{{ item.title }}</h3>
+                <p
+                    v-show="item.isOpen"
+                >{{ item.text }}</p>
+                <hr>
+            </div>
+            
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="toggle.js"></script>
+    </body>
+</html>
