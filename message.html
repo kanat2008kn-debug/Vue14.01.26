@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <p v-if="isOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eveniet accusamus nobis atque, aliquam quidem minima. Aliquam ipsam sed repellendus corrupti officiis repellat voluptatum natus repudiandae, ut omnis doloremque rem voluptatibus expedita facilis non error adipisci incidunt commodi tempore consequatur eum? Natus dolor culpa quibusdam nihil nulla non voluptates quas!</p>
+        <button 
+            @click="isOpen = !isOpen"
+            v-if="!isOpen"
+            >Открыть текст
+        </button>
+        <button 
+            @click="isOpen = !isOpen"
+            v-else
+            >Скрыть текст
+        </button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="message.js"></script>
+</body>
+</html>
