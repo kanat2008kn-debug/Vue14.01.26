@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="num_win">
+            <input type="number"
+                v-model="num1"
+                > 
+            <input type="number"
+                v-model="num2"
+                >
+        </div>
+        <div>
+            <button 
+                @click="result = num1 + num2">+</button>
+            <button 
+                @click="result = num1 - num2">-</button>
+            <button 
+                @click="result = num1 * num2">*</button>
+            <button 
+                @click="result = num1 / num2">/</button>
+        </div>
+        <div>
+            Ответ: <span>{{result}}</span>
+        </div>
+        <button @click="num1 = 0; num2 = 0; result = 0">Очистить</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="calc.js"></script>
+</body>
+</html>
